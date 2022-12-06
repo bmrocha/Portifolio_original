@@ -2,11 +2,11 @@ export default function initBarrinhas() {
   const tecValor = [
     { nome: "git e github", valor: 85 },
     { nome: "html e css:", valor: 85 },
+    { nome: "bootstrap", valor: 50 },
     { nome: "sass", valor: 50 },
     { nome: "javascript", valor: 75 },
     { nome: "typescript", valor: 50 },
-    { nome: "bootstrap", valor: 50 },
-    { nome: "react", valor: 40 },
+    { nome: "react js", valor: 45 },
     { nome: "photoshop", valor: 50 },
     { nome: "figma", valor: 50 },
     { nome: "sgbd (mysql)", valor: 50 },
