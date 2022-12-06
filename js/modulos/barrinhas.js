@@ -1,23 +1,28 @@
-export default function initBarrinhas(){
+export default function initBarrinhas() {
   const tecValor = [
-    {nome: "git e github", valor: 50},
-    {nome: "html e css:", valor:70},
-    {nome: "sass", valor:50},
-    {nome: "javascript", valor:50},
-    {nome: "typescript", valor:30},
-    {nome: "bootstrap", valor:0},
-    {nome: "react", valor:0},
-    {nome: "photoshop", valor:50},
-    {nome: "figma", valor:20},
-    {nome: "sgbd (mysql)", valor: 50},
-    {nome: "php", valor: 10},
-    {nome: "node Js", valor:0},
+    { nome: "git e github", valor: 85 },
+    { nome: "html e css:", valor: 85 },
+    { nome: "sass", valor: 50 },
+    { nome: "javascript", valor: 75 },
+    { nome: "typescript", valor: 50 },
+    { nome: "bootstrap", valor: 50 },
+    { nome: "react", valor: 40 },
+    { nome: "photoshop", valor: 50 },
+    { nome: "figma", valor: 50 },
+    { nome: "sgbd (mysql)", valor: 50 },
+    { nome: "mongoDB", valor: 50 },
+    { nome: "php", valor: 60 },
+    { nome: "python", valor: 75 },
+    { nome: "node Js", valor: 50 },
+    { nome: "windows", valor: 90 },
+    { nome: "linux", valor: 85 },
+    { nome: "aws", valor: 50 },
   ];
 
   const barrinhas = document.querySelectorAll(".js [data-js-grid-habilidade]");
   let span1, span2, div;
 
-  if(barrinhas.length){
+  if (barrinhas.length) {
     barrinhas.forEach((barrinha, index) => {
       span1 = barrinha.querySelector("span:nth-child(1)");
       span2 = barrinha.querySelector("span:nth-child(2)");
