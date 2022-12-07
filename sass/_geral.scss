@@ -12,19 +12,19 @@
   word-wrap: break-word;
 }
 
-  *::-webkit-scrollbar{
-	  width:12px;
-  }
+*::-webkit-scrollbar {
+  width: 12px;
+}
 
- *::-webkit-scrollbar-track{
-    background: $primeira-cor;
- }
+*::-webkit-scrollbar-track {
+  background: $primeira-cor;
+}
 
- *::-webkit-scrollbar-thumb{
-    background-color:$segunda-cor;
-	  border-radius: 10px;
-    border:4px solid $primeira-cor;
- }
+*::-webkit-scrollbar-thumb {
+  background-color: $segunda-cor;
+  border-radius: 10px;
+  border: 4px solid $primeira-cor;
+}
 
 
 body {
@@ -38,8 +38,8 @@ body {
   padding: 0 20px;
 }
 
-[data-center-neutro]{
- max-width: #{$desktop + 100};
+[data-center-neutro] {
+  max-width: #{$desktop + 100};
   width: 100%;
   padding: 70px 0 60px 0;
 }
@@ -57,10 +57,11 @@ body {
   transform: translate3d(0, 50px, 0);
   transition: .9s;
 
-  @include responsivo(tablet){
+  @include responsivo(tablet) {
     max-width: #{$tablet};
   }
-  @include responsivo(celular){
+
+  @include responsivo(celular) {
     max-width: #{$celular};
   }
 
@@ -79,24 +80,24 @@ body {
   z-index: 300;
 
   .menu-center {
-    padding:0; //reset padrao do [data-center]
+    padding: 0; //reset padrao do [data-center]
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .pointer-hamburguer{
+    .pointer-hamburguer {
       display: none;
       max-width: 30px;
       height: auto;
       padding: 12px 0;
       cursor: pointer;
 
-      @include responsivo(tablet){
+      @include responsivo(tablet) {
         display: block;
         order: 2;
       }
 
-      @include responsivo(celular){
+      @include responsivo(celular) {
         display: block;
         order: 2;
       }
@@ -107,29 +108,29 @@ body {
       width: 25px;
       height: 3px;
       background-color: #fff;
-      position:relative;
+      position: relative;
     }
 
-    .menu-hamburguer:before,   
+    .menu-hamburguer:before,
     .menu-hamburguer:after {
-      content:"";
+      content: "";
       display: block;
       width: 25px;
       height: 3px;
       background-color: #fff;
-      position:relative;
+      position: relative;
       transition: all .5s;
     }
 
     .menu-hamburguer:before {
       top: -7px;
-    }  
+    }
 
     .menu-hamburguer:after {
       top: 5px;
     }
 
-   .pointer-hamburguer.ativo{
+    .pointer-hamburguer.ativo {
       position: relative;
       z-index: 300;
 
@@ -139,14 +140,14 @@ body {
       }
 
       .menu-hamburguer:after {
-          transform: rotateZ(45deg);
-          top:-10px;
-          transition: transform .5s, top 0s;
+        transform: rotateZ(45deg);
+        top: -10px;
+        transition: transform .5s, top 0s;
       }
 
       .menu-hamburguer:before {
-          transform: rotateZ(-45deg);
-          transition: transform .5s;
+        transform: rotateZ(-45deg);
+        transition: transform .5s;
       }
     }
 
@@ -156,8 +157,8 @@ body {
       font-size: sizeElement(35);
       text-decoration: none;
       font-weight: 600;
-  
-      @include responsivo(celular){
+
+      @include responsivo(celular) {
         font-size: sizeElement(20);
       }
 
@@ -177,18 +178,19 @@ body {
       font-size: sizeElement(14);
       align-items: center;
 
-      @include responsivo(celular){
+      @include responsivo(celular) {
         justify-content: flex-end;
-        gap:20px;
-      }
-      @include responsivo(tablet){
-        justify-content: flex-end;
-        gap:20px;
+        gap: 20px;
       }
 
-      .links{
-        
-        @include responsivo(tablet){
+      @include responsivo(tablet) {
+        justify-content: flex-end;
+        gap: 20px;
+      }
+
+      .links {
+
+        @include responsivo(tablet) {
           display: block;
           width: 0%;
           opacity: 0;
@@ -198,16 +200,16 @@ body {
           position: absolute;
           z-index: 299;
           overflow: hidden;
-          top:80px;
-          right:0;
+          top: 80px;
+          right: 0;
 
-          &.ativo{
+          &.ativo {
             display: block;
             width: 100%;
             opacity: 1;
           }
 
-          a{
+          a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -218,7 +220,7 @@ body {
           }
         }
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           display: block;
           width: 0%;
           opacity: 0;
@@ -228,16 +230,16 @@ body {
           position: absolute;
           z-index: 299;
           overflow: hidden;
-          top:80px;
-          right:0;
+          top: 80px;
+          right: 0;
 
-          &.ativo{
+          &.ativo {
             display: block;
             width: 100%;
             opacity: 1;
           }
-         
-          a{
+
+          a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -258,28 +260,29 @@ body {
         border-bottom: 4px solid transparent;
       }
 
-      a.ativo{
+      a.ativo {
         border-bottom: 4px solid $segunda-cor;
       }
-     
+
       .baixar-cv {
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 8px;
         font-weight: bold;
-        background-image: linear-gradient(180deg, $segunda-cor ,$quarta-cor);
-        margin-left: 20px;        
+        background-image: linear-gradient(180deg, $segunda-cor , $quarta-cor);
+        margin-left: 20px;
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           order: 1;
           margin-left: 0;
         }
-        @include responsivo(tablet){
+
+        @include responsivo(tablet) {
           order: 1;
           margin-left: 0;
         }
-        
+
         a {
           color: $texto-cor-primeira;
           padding: 8px 8px 4px 8px !important;
@@ -289,25 +292,27 @@ body {
   }
 }
 
-@keyframes openBurguer{
-  from{
+@keyframes openBurguer {
+  from {
     opacity: 0;
     width: 0%;
   }
-  to{
+
+  to {
     opacity: 1;
     width: 70%;
   }
 }
 
 .banner {
-  background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50% );
+  background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50%);
   height: 540px;
 
-  @include responsivo(tablet){
+  @include responsivo(tablet) {
     height: auto;
   }
-  @include responsivo(celular){
+
+  @include responsivo(celular) {
     height: auto;
   }
 
@@ -317,12 +322,13 @@ body {
     position: relative;
     flex-wrap: wrap;
 
-      @include responsivo(tablet){
-        display: block;
-      }
-      @include responsivo(celular){
-        display: block;
-      }
+    @include responsivo(tablet) {
+      display: block;
+    }
+
+    @include responsivo(celular) {
+      display: block;
+    }
 
     .titulo {
       flex: 1 0 480px;
@@ -332,23 +338,25 @@ body {
       position: relative;
       z-index: 10;
 
-      @include responsivo(tablet){
+      @include responsivo(tablet) {
         margin-bottom: 50px;
         display: block;
       }
-      @include responsivo(celular){
+
+      @include responsivo(celular) {
         display: block;
         margin-bottom: 50px;
       }
 
 
-      .titulo-content{
+      .titulo-content {
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           max-width: 300px;
           margin: 0 auto;
         }
-        @include responsivo(tablet){
+
+        @include responsivo(tablet) {
           max-width: 400px;
           margin: 0 auto;
         }
@@ -357,14 +365,14 @@ body {
       .btn-btn {
         height: 70px;
         max-width: 400px;
-        width:100%;
+        width: 100%;
         border-radius: 15px;
         font-size: sizeElement(21);
         font-weight: 400;
         position: relative;
-        z-index:300;
+        z-index: 300;
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           max-width: 320px;
         }
 
@@ -374,7 +382,8 @@ body {
           gap: 10px;
           text-decoration: none;
           padding: 15px 130px;
-          @include responsivo(celular){
+
+          @include responsivo(celular) {
             padding: 15px 80px;
           }
         }
@@ -385,7 +394,7 @@ body {
         font-size: sizeElement(40);
         font-weight: 700;
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           font-size: sizeElement(30);
         }
       }
@@ -394,14 +403,14 @@ body {
         font-size: sizeElement(26);
         color: $texto-cor-terceira;
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           font-size: sizeElement(20);
         }
       }
 
-      .text-content{
-        div{
-            margin: 6px 0;
+      .text-content {
+        div {
+          margin: 6px 0;
         }
       }
 
@@ -410,8 +419,8 @@ body {
         animation: barraPisca 0.8s infinite;
         color: $segunda-cor;
         font-size: sizeElement(40);
-        
-        @include responsivo(celular){
+
+        @include responsivo(celular) {
           font-size: sizeElement(30);
         }
       }
@@ -446,14 +455,15 @@ body {
       position: relative;
       z-index: 5;
 
-      @include responsivo(tablet){
+      @include responsivo(tablet) {
         flex: 1 0 480px;
       }
-      @include responsivo(celular){
-        flex:1 0 350px;
+
+      @include responsivo(celular) {
+        flex: 1 0 350px;
       }
 
-      img{
+      img {
         animation: anima-img-banner ease-in-out 3s alternate infinite;
       }
     }
@@ -464,6 +474,7 @@ body {
   from {
     transform: translateY(60px);
   }
+
   to {
     transform: translateY(30px);
   }
@@ -473,6 +484,7 @@ body {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -488,74 +500,77 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width:100%;
+    width: 100%;
 
-    .sobre-card{
-        border: 0px solid #dedfe0;
-        max-width: 300px;
-        width:100%;
-        padding: 10px;
+    .sobre-card {
+      border: 0px solid #dedfe0;
+      max-width: 300px;
+      width: 100%;
+      padding: 10px;
 
-      h3{
+      h3 {
         font-weight: 600;
         margin-bottom: 10px;
       }
 
-      p{
+      p {
         line-height: lineheight(14);
         margin-bottom: 20px;
         color: $texto-cor-segunda;
         line-height: lineheight(16);
       }
 
-      @include responsivo(celular){
+      @include responsivo(celular) {
         margin: 20px 0 40px 0;
       }
-      @include responsivo(tablet){
+
+      @include responsivo(tablet) {
         margin: 20px 0 40px 0;
       }
     }
 
-    .sobre-card:nth-child(1){
+    .sobre-card:nth-child(1) {
       border-bottom: 2px solid #d3d3d3;
 
-      @include responsivo(celular){
-       order: 1;
-      border-bottom: 2px solid #d3d3d3;
+      @include responsivo(celular) {
+        order: 1;
+        border-bottom: 2px solid #d3d3d3;
       }
 
-      @include responsivo(tablet){
-       order: 1;
-      border-bottom: 0px solid #d3d3d3;
+      @include responsivo(tablet) {
+        order: 1;
+        border-bottom: 0px solid #d3d3d3;
       }
     }
 
-    .sobre-card:nth-child(2){
+    .sobre-card:nth-child(2) {
 
-      @include responsivo(celular){
+      @include responsivo(celular) {
         order: 0;
       }
 
-      @include responsivo(tablet){
+      @include responsivo(tablet) {
         order: 0;
       }
 
-      img{
+      img {
         transform: scale();
         transition: .5s;
       }
 
-      img:hover{
+      img:hover {
         transform: scale(1.2);
       }
     }
 
-    .sobre-card:nth-child(3){
-     border-bottom: 2px solid #d3d3d3;
-      @include responsivo(celular){
+    .sobre-card:nth-child(3) {
+      border-bottom: 2px solid #d3d3d3;
+
+      @include responsivo(celular) {
         order: 2;
       }
-      @include responsivo(tablet){
+
+      @include responsivo(tablet) {
         order: 2;
         max-width: 635px;
         width: 100%;
@@ -568,14 +583,14 @@ body {
   background: $primeira-cor;
 
   .projetos-center {
-      
+
     .projeto-card {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
 
-      @include responsivo(tablet){
+      @include responsivo(tablet) {
         justify-content: flex-start;
         padding-left: 8%;
       }
@@ -586,23 +601,23 @@ body {
     }
 
     .card {
-        max-width: 280px;
-        width: 100%;
-        background-color: darken($primeira-cor,4%); 
-        padding: 20px 10px 10px 10px ;
-        border-radius: 5px;
+      max-width: 280px;
+      width: 100%;
+      background-color: darken($primeira-cor, 4%);
+      padding: 20px 10px 10px 10px;
+      border-radius: 5px;
 
       div {
         //@include imgBg("fundo-card.png");
-        background-color: darken($primeira-cor,20%);
+        background-color: darken($primeira-cor, 20%);
         width: 260px;
         height: 200px;
-        border-radius: 10px;  
-        margin-bottom: 20px;   
+        border-radius: 10px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: center;
-        align-items: center;  
-        color:$quarta-cor;
+        align-items: center;
+        color: $quarta-cor;
         font-size: sizeElement(20);
       }
 
@@ -618,7 +633,7 @@ body {
       }
 
       kbd {
-        color:$quarta-cor;
+        color: $quarta-cor;
         margin-top: 15px;
       }
     }
@@ -633,24 +648,25 @@ body {
       flex-wrap: wrap;
       justify-content: space-evenly;
 
-      .card1{
+      .card1 {
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           margin-top: 30px;
         }
-        @include responsivo(tablet){
-          margin-top: 30px; 
+
+        @include responsivo(tablet) {
+          margin-top: 30px;
         }
       }
 
-      .card2{
+      .card2 {
 
-        @include responsivo(celular){
+        @include responsivo(celular) {
           margin-top: 60px;
         }
 
-        @include responsivo(tablet){
-          margin-top: 60px; 
+        @include responsivo(tablet) {
+          margin-top: 60px;
         }
       }
 
@@ -662,18 +678,18 @@ body {
         padding: 40px 20px 35px 20px;
         position: relative;
 
-        @include responsivo(celular){
-         flex: 0 1 350px;
+        @include responsivo(celular) {
+          flex: 0 1 350px;
         }
 
-        @include responsivo(tablet){
-         flex: 0 1 400px;
+        @include responsivo(tablet) {
+          flex: 0 1 400px;
         }
 
         .titulo {
           margin: 0 auto;
           text-align: center;
-          padding-top:9px;
+          padding-top: 9px;
           color: $texto-cor-terceira;
           background-color: $segunda-cor;
           border-radius: 15px;
@@ -681,12 +697,13 @@ body {
           height: sizeElement(35);
           top: -58px;
           position: relative;
-        
 
-          @include responsivo(celular){
+
+          @include responsivo(celular) {
             //left: 32%;
           }
-          @include responsivo(tablet){
+
+          @include responsivo(tablet) {
             //left: 35%;
           }
         }
@@ -701,6 +718,7 @@ body {
           span:nth-child(2) {
             justify-self: end;
           }
+
           span {
             color: $texto-cor-primeira;
             font-size: sizeElement(18);
@@ -741,11 +759,12 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
-    
-    @include responsivo(tablet){
+
+    @include responsivo(tablet) {
       display: block;
     }
-    @include responsivo(celular){
+
+    @include responsivo(celular) {
       display: block;
     }
   }
@@ -755,12 +774,13 @@ body {
     display: flex;
     justify-content: flex-end;
 
-    @include responsivo(tablet){
+    @include responsivo(tablet) {
       flex: 1 0 480px;
       justify-content: center;
     }
-    @include responsivo(celular){
-      flex:1 0 280px;
+
+    @include responsivo(celular) {
+      flex: 1 0 280px;
       justify-content: center;
     }
 
@@ -769,7 +789,7 @@ body {
       width: 90%;
 
       p {
-        word-wrap:  break-word;
+        word-wrap: break-word;
         font-size: sizeElement(18);
         line-height: lineheight(18);
       }
@@ -796,8 +816,8 @@ body {
         display: flex;
         justify-content: flex-start;
         margin-top: 35px;
-    
-        @include responsivo(celular){
+
+        @include responsivo(celular) {
           justify-content: space-evenly;
         }
 
@@ -837,12 +857,13 @@ body {
     display: flex;
     justify-content: center;
 
-    @include responsivo(tablet){
+    @include responsivo(tablet) {
       flex: none;
       display: block;
       margin-top: 50px;
     }
-    @include responsivo(celular){
+
+    @include responsivo(celular) {
       flex: none;
       display: block;
       margin-top: 50px;
@@ -851,22 +872,24 @@ body {
 
     .form-content {
 
-      @include responsivo(tablet){
+      @include responsivo(tablet) {
         margin: 0 auto;
         max-width: 500px;
         width: 100%;
       }
-      @include responsivo(celular){
+
+      @include responsivo(celular) {
         margin: 0 auto;
         max-width: 479px;
         width: 100%;
       }
-  
+
       label {
         font-weight: 600;
       }
 
-      input,textarea {
+      input,
+      textarea {
         color: $texto-cor-segunda;
         font-size: sizeElement(18);
         border-radius: 12px;
@@ -879,10 +902,11 @@ body {
         margin: 5px 0 15px 0;
         padding: 1px 20px;
 
-        @include responsivo(tablet){
-             width: 100%;
+        @include responsivo(tablet) {
+          width: 100%;
         }
-        @include responsivo(celular){
+
+        @include responsivo(celular) {
           width: 100%;
         }
       }
@@ -894,10 +918,11 @@ body {
         margin-top: 6px;
         resize: none;
 
-        @include responsivo(tablet){
+        @include responsivo(tablet) {
           width: 100%;
         }
-        @include responsivo(celular){
+
+        @include responsivo(celular) {
           max-width: 480px;
           width: 100%;
         }
@@ -915,11 +940,9 @@ body {
         border: 2px solid $segunda-cor;
 
         &:hover {
-          background-image: linear-gradient(
-            180deg,
-            $segunda-cor,
-            $quarta-cor
-          );
+          background-image: linear-gradient(180deg,
+              $segunda-cor,
+              $quarta-cor );
         }
       }
     }
@@ -935,11 +958,11 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding:0;
+    padding: 0;
   }
 }
 
-.bookmark{
+.bookmark {
   width: 40px;
   display: inline-block;
   position: fixed;
@@ -950,21 +973,17 @@ body {
   opacity: 0;
   transition: 1.5s;
 
-  &.ativo{
+  &.ativo {
     opacity: 1;
   }
 }
 
-@keyframes animabook{
-  from{
-    transform: translate3d(0,-20px,0);
+@keyframes animabook {
+  from {
+    transform: translate3d(0, -20px, 0);
   }
-  to{
-    transform: translate3d(0,0px,0);
+
+  to {
+    transform: translate3d(0, 0px, 0);
   }
 }
-
-
-
-
-
