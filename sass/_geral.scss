@@ -601,11 +601,11 @@ body {
     }
 
     .card {
-      max-width: 280px;
+      max-width: 300px;
       width: 100%;
       background-color: darken($primeira-cor, 4%);
       padding: 20px 10px 10px 10px;
-      border-radius: 5px;
+      border-radius: 15px;
 
       div {
         //@include imgBg("fundo-card.png");
